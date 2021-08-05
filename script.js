@@ -18,11 +18,11 @@ slider.addEventListener('mousedown', e => {
     startX = e.pageX - slider.offsetLeft;
     scrollLeft = slider.scrollLeft;
 });
-slider.addEventListener('mouseleave', evt => {
+slider.addEventListener('mouseleave', e => {
     isDown = false;
     slider.classList.remove('active');
 });
-slider.addEventListener('mouseup', evt => {
+slider.addEventListener('mouseup', e => {
     isDown = false;
     slider.classList.remove('active');
 });

@@ -50,7 +50,7 @@ body{
     overflow: scroll;
     overflow-y: hidden;
     height: 55vh;
-    scroll-snap-type: x;
+    scroll-snap-type: none; /*sets how strictly snap points are enforced on the scroll container in case there is one*/
     scroll-padding: 1rem;
 
 }
@@ -72,11 +72,11 @@ body{
 }
 
 .active {
-    scroll-snap-type: unset;
+    scroll-snap-type: none;
 }
 
 li {
-    scroll-snap-align: center;
+    scroll-snap-align: center; /*The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis*/
     display: inline-block;
     border-radius: 3px;
     font-size: 0;
