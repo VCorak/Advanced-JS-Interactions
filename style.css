@@ -102,11 +102,16 @@ li {
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content, .modal-text {
     margin: auto;
     display: block;
     width: 80%;
     max-width: 500px;
+}
+
+.modal-text {
+    color: #fff;
+    text-align: center;
 }
 
 /* Caption of Modal Image */
