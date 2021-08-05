@@ -34,6 +34,7 @@ body{
     height: 350px;
 }
 
+/* CAROUSEL*/
 .carouselContainer{
     background: royalblue;
     height: 400px;
@@ -81,6 +82,39 @@ li {
     border-radius: 3px;
     font-size: 0;
 }
+
+/* END CAROUSEL*/
+
+/*POP-UP*/
+.popup, .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+    display: none;
+}
+
+.popup, .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 95%;
+    max-width: 500px;
+    height: 250px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+/*END POP-UP*/
 
 .title{
     font-size: 1.5em;
