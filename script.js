@@ -109,7 +109,12 @@ function cursor(e) {
 
 // CIRCLE RUNNING FROM MOUSE
 
+// DARK MODE SWITCH
 
+function darkMode() {
+        const element = document.body;
+        element.classList.toggle("darkMode");
+}
 
 
 
