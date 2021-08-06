@@ -1,12 +1,38 @@
+// LETTER
+
 Array.from(document.querySelectorAll(".letter")).forEach(el => {
    el.innerText = randomLetter();
 });
 
-function randomLetter(){
+function randomLetter() {
     const alphabet = "abcdefghijklmnopqrstuvwxyz"
     return alphabet[Math.floor(Math.random() * alphabet.length)]
+
 }
 
+const letters = document.querySelectorAll('.letter');
+
+document.addEventListener('keydown', (e) => {
+    letters.forEach((letter) => {
+        if (e.key === letter.innerHTML) {
+            letter.style.fontSize = '25px';
+            letter.style.color = `rgb(255,20,147)`;
+        }
+    });
+});
+
+document.addEventListener('keyup', (e) => {
+    letters.forEach((letter) => {
+        if (e.key === letter.innerHTML) {
+            letter.style.transform = 'none';
+        }
+    });
+});
+
+
+
+
+// CAROUSEL
 const slider = document.querySelector('.gallery');
 let isDown = false;
 let startX;
@@ -79,8 +105,12 @@ box.addEventListener('mousemove', cursor);
 function cursor(e) {
     chaser.style.top = e.pageY + 'px';
     chaser.style.left = e.pageX + 'px';
-
 }
+
+// CIRCLE RUNNING FROM MOUSE
+
+
+
 
 
 
