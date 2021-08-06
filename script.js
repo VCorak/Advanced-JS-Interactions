@@ -70,6 +70,18 @@ lightbox.addEventListener("click", (e) => {
     lightbox.classList.remove("active");
 })
 
+// CIRCLE CHASING MOUSE
+
+let chaser = document.querySelector('.chaser');
+let box = document.querySelector('.box')
+box.addEventListener('mousemove', cursor);
+
+function cursor(e) {
+    chaser.style.top = e.pageY + 'px';
+    chaser.style.left = e.pageX + 'px';
+
+}
+
 
 
 
