@@ -141,13 +141,6 @@ span:hover .poke-img {
 /* RUNNER */
 /* END RUNNER */
 
-/* LETTERS */
-span .letter {
-    transform: rotate(90deg);
-}
-
-
-/* END LETTERS */
 
 .title{
     font-size: 1.5em;
