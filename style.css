@@ -115,8 +115,27 @@ li {
     max-height: 100%;
 }
 
-
 /*END POP-UP*/
+
+/*POKE HOVER IMG */
+
+span .poke-img {
+    display:none;
+}
+span:hover .poke-img {
+    display:block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 45%;
+    background-color: rgba(240, 240, 240, 0.8);
+
+
+}
+
+
+
+/* END POKE HOVER IMG */
 
 .title{
     font-size: 1.5em;
