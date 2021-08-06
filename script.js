@@ -29,9 +29,6 @@ document.addEventListener('keyup', (e) => {
     });
 });
 
-
-
-
 // CAROUSEL
 const slider = document.querySelector('.gallery');
 let isDown = false;
