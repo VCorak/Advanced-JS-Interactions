@@ -35,19 +35,41 @@ slider.addEventListener('mousemove', e => {
     slider.scrollLeft = scrollLeft - walk;
 })
 
-function myFunction(img) {
-    let expandImg = document.getElementById("expandedImg");
-    let imgText = document.getElementById("imgtext");
-    expandImg.src = img.src;
-    imgText.innerHTML = img.alt;
-    expandImg.parentElement.style.display = "block";
+// COLLAGE POP-UP
 
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target === expandImg) {
-            expandImg.style.display = "none";
+const lightbox = document.createElement("div");
+lightbox.id = "lightbox";
+document.body.appendChild(lightbox);
+
+const lightboxImg = document.querySelectorAll(".collage-img");
+lightboxImg.forEach((lightboxImg) => {
+    lightboxImg.addEventListener("click", (e) => {
+        lightbox.classList.add("active");
+
+        const img = document.createElement("img");
+        img.src = lightboxImg.src;
+
+        // Captions
+        let caption = document.createElement("div");
+        caption.classList.add("caption");
+        img.alt = lightboxImg.alt;
+        caption.innerText = img.alt;
+
+        while (lightbox.firstChild) {
+            lightbox.removeChild(lightbox.firstChild);
         }
-    }
-}
+        lightbox.appendChild(img);
+        if(img.alt) {
+            lightbox.appendChild(caption);
+        }
+    })
+})
+
+lightbox.addEventListener("click", (e) => {
+    if (e.target !== e.currentTarget) return;
+    lightbox.classList.remove("active");
+})
+
+
 
 
